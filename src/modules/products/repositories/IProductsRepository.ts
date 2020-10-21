@@ -4,12 +4,12 @@ import ICreateProductDTO from '../dtos/ICreateProductDTO';
 import IUpdateProductsQuantityDTO from '../dtos/IUpdateProductsQuantityDTO';
 
 interface IFindProducts {
-  id: string;
+    id: string;
 }
 
 export default interface IProductsRepository {
-  create(data: ICreateProductDTO): Promise<Product>;
-  findByName(name: string): Promise<Product | undefined>;
-  findAllById(products: IFindProducts[]): Promise<Product[]>;
-  updateQuantity(products: IUpdateProductsQuantityDTO[]): Promise<Product[]>;
+    create(data: ICreateProductDTO): Promise<Product>;
+    findByName(name: string): Promise<Product | undefined>;
+    findAllById(products: IFindProducts[]): Promise<Product[]>;
+    updateQuantity(products: IUpdateProductsQuantityDTO[]): Promise<Product[]>;
 }
